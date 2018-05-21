@@ -1,0 +1,103 @@
+h1{
+	color:red;
+	text-align: center;
+	text-shadow: 0 1px 0 #ccc , 01px 15px rgba(0,0,0,.2), 0 2px 0 #ccc , 0 3px 0 #ccc , 0 4px 0 #ccc , 0 5px 0 #ccc , 0 6px 0 #ccc , 0 7px 0 #ccc , 0 8px 0 #ccc , 0 9px 0 #ccc , 0 10px 0 #ccc , 0 11px 0 #ccc , 0 12px 0 #ccc , 0 20px 30px rgba(0,0,0,.5);  
+	font-size: 54px
+}
+#wrap .h1 {
+	font-size: 32px
+	text-align:left;
+	font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+}
+#wrap{
+	width:100%;
+	margin:0 auto;
+	text-align:left;
+	margin-top:8px;
+	padding:5px;
+	background:#fff;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+	font-size:13px;    
+    line-height:16px;
+}
+#wrap .cont_details fieldset,.cont_order fieldset{
+	margin:10px;
+	padding:20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+#wrap legend{
+	font-size:30px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#FF0000;
+	font-weight:bold;
+	font-style:italic;
+    padding-bottom:10px;
+}
+#wrap .cont_details input{
+	margin-bottom:10px;
+	color:#000;
+}
+#wrap .input1:hover,.input1:active{
+	
+}
+#wrap label{
+	display:block;
+	font-size:15px;
+	color:red;
+    font-weight:bold;
+    font-family: "Comic Sans MS", Cursive, sans-serif
+}
+#wrap label.inlinelabel
+{
+    display:inline;
+}
+#wrap .cont_order input{
+	margin-bottom:5px;
+}
+#wrap .cont_order p{
+	padding-top:5px;
+}
+
+#wrap input[type="radio"]
+{
+margin-top:8px;
+margin-bottom:8px;
+}
+
+#wrap input[type="text"]:hover,
+#wrap input[type="text"]:active {
+background-color: #FAF398;
+}
+
+#wrap input#submit
+{
+margin:10px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+#wrap div#totalPrice
+{
+    padding:10px;
+    font-weight:bold;
+    background-color:#ff0;
+}
+
+#wrap label.radiolabel
+{
+font-weight:normal;
+ display:inline;
+}
+
+.link2{
+	text-align: center;
+	font-size: 20px
+} 
+.box-6{
+	text-align: center;
+}

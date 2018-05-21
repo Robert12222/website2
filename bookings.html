@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Tickets</title>
+	 <link rel = "stylesheet"
+   type = "text/css"
+   href = "css/style.css" />
+</head>
+	<body>
+		<header>
+	<div class="box-3">	
+	<p>	
+	<h1> Select Your Tickets</h1>
+	</header>
+	<br>
+	<div>
+	<div class="box-4">
+	<label>Gender</label>
+	<select> name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+		<p>
+		<div>
+	<p>
+		<label>Age</label>
+	<input type="number" name="age"
+				value="30">
+		<P>
+		<label>Films Showing</label>
+			<select> name="films">
+			<option value="DEADPOOL 2">DEADPOOL 2</option>
+			<option value="AVENGERS: INFINITY WAR">AVENGERS: INFINITY WAR</option>
+			<option value="SHERLOCK GNOMES">SHERLOCK GNOMES</option>
+		</select>
+	<div>
+<P>
+	<label>Chose a Day</label>
+		<select> name="Days">
+			<option value="Monday">Monday</option>
+			<option value="Tuesdays">Tuesday</option>
+			<option value="Wednesday">Wednesday</option>
+			<option value="Thuesday">Thuesday</option>
+			<option value="Friday">Friday</option>
+			<option value="Saturday">Saturday</option>
+			<option value="Sunday">Sunday</option>
+		<select>
+		<div>
+		<P>
+	<div>
+<p>
+	<label>Chose Your Ticket</label>
+		<Select id="Ticket" name='Ticket'
+    		onchange="calculateTotal()">
+			<option value="Standard (£8)">Standard (£8)</option>
+			<option value="OAP (£6)">OAP (£6)</option>
+			<option value="Student (£6)">Student (£6)</option>
+			<option value="Child (£4)">Child (£4)</option>
+	<select>
+<P>
+	<div>
+		<p>
+	<label>Chose Your Ticket</label>
+	<Select id="Ticket" name='Ticket'
+    		onchange="calculateTotal()">
+			<option value="Standard (£8)">Standard (£8)</option>
+			<option value="OAP (£6)">OAP (£6)</option>
+			<option value="Student (£6)">Student (£6)</option>
+			<option value="Child (£4)">Child (£4)</option>
+			<select>
+		<P>
+	<div>
+<p>
+	<label>Chose Your Ticket</label>
+	<Select id="Ticket" name='Ticket'
+    		onchange="calculateTotal()">
+			<option value="Standard (£8)">Standard (£8)</option>
+			<option value="OAP (£6)">OAP (£6)</option>
+			<option value="Student (£6)">Student (£6)</option>
+			<option value="Child (£4)">Child (£4)</option>
+	<select>
+<P>
+	<div>
+		<p>
+		<label>Chose Your Ticket</label>
+			<Select id="Ticket" name='Ticket'
+    		onchange="calculateTotal()">
+				<option value="Standard (£8)">Standard (£8)</option>
+				<option value="OAP (£6)">OAP (£6)</option>
+				<option value="Student (£6)">Student (£6)</option>
+				<option value="Child (£4)">Child (£4)</option>
+				<select>
+    	<script type="text/javascript">
+    		var Chose Your Ticket_prices= new Array();
+		Chose Your Ticket_prices["Standard"]=8;
+		Chose Your Ticket_prices["OAP"]=6;
+		Chose Your Ticket_prices["Student"]=6;
+		Chose Your Ticket_prices["Child"]=4;
+
+		function getTicketPrice()
+{
+    var choseYourTicketsPrice=0;
+    var theForm = document.forms["ticketform"];
+     var selectedTicket = theForm.elements["Ticket"];
+    choseYourTicketPrice = Ticket_prices[selectedTicket.value];
+     return choseYourTicketPrice;
+}
+    	var ChoseYourTicket2_prices= new Array();
+		Chose Your Ticket_prices2["Standard"]=8;
+		Chose Your Ticket_prices2["OAP"]=6;
+		Chose Your Ticket_prices2["Student"]=6;
+		Chose Your Ticket_prices2["Child"]=4;
+
+		function getTicket2Price()
+{
+    var choseYourTicketsPrice2=0;
+
+    var theForm = document.forms["ticketform"];
+     var selectedTicket = theForm.elements["Ticket"];
+     choseYourTicketPrice2 = Ticket_prices[selectedTicket.value];
+     return choseYourTicket2Price;
+}
+
+	var ChoseYourTicket3_prices= new Array();
+		Chose Your Ticket_prices3["Standard"]=8;
+		Chose Your Ticket_prices3["OAP"]=6;
+		Chose Your Ticket_prices3["Student"]=6;
+		Chose Your Ticket_prices3["Child"]=4;
+
+		function getTicket3Price()
+{
+    var choseYourTicketsPrice3=0;
+   
+    var theForm = document.forms["ticketform"];
+     var selectedTicket = theForm.elements["Ticket"];
+     choseYourTicketPrice3 = Ticket_prices[selectedTicket.value];    return choseYourTicket3Price;
+}
+
+	var ChoseYourTicket4_prices= new Array();
+		Chose Your Ticket_prices2["Standard"]=8;
+		Chose Your Ticket_prices2["OAP"]=6;
+		Chose Your Ticket_prices2["Student"]=6;
+		Chose Your Ticket_prices2["Child"]=4;
+
+		function getTicket4Price()
+{
+    var choseYourTicketsPrice4=0;
+      var theForm = document.forms["ticketform"];
+      var selectedTicket = theForm.elements["Ticket"];
+       choseYourTicketPrice4 = Ticket_prices[selectedTicket.value];
+     return choseYourTicket4Price;
+}
+
+	function getTotal()
+{
+    
+    var TicketPrice = getTicketPrice() + getTicket2Price() + getTicketPrice3() + getTicket4Price();
+    document.getElementById('totalPrice').innerHTML =
+     "Total Price For Tickets £"+ticketPrice;
+}
+    	</script>
+			<div>
+				<label>Total Price</label>
+				<input type="Total Price" name="Total Price">
+				<div>
+				<br>
+				<input type="submit" name="Submit"
+				Value="Submit"
+			</div>
+			</fieldset>	
+		<div style="margin-top:90px"></div>
+		<div class="link">
+	<a href="index.html">Home Page</a>
+	<br>
+	<br>
+	<br>
+	<a href="food.html">Food and Drinks</a>
+<P>
+	</body>	
+</html>

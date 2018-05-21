@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<body onload='showTotal()'>
+    <div id="wrap">
+        <head>
+    <title>QA Food and Drink</title>
+     <link rel = "stylesheet"
+   type = "text/css"
+   href = "css/food.css" />
+   <div class="title">
+    <h1>QA Food and Drinks<h1>
+  </div>
+</head>
+        <form action="" id="popcorn" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+                <br>
+                <br>
+               <fieldset>
+                <legend>Select Popcorn!</legend>
+                <label >Pocorn Size</label>
+                <label class='radiolabel'><input type="checkbox"  name="selectedpopcorn" value="Small" onclick="calculateTotal()" />Popcorn bowl 1.5L -  (£4)</label><br/>
+                <label class='radiolabel'><input type="checkbox"  name="selectedpopcorn" value="Medium" onclick="calculateTotal()" />Popcorn bowl 2L -  (£6)</label><br/>
+                <label class='radiolabel'><input type="checkbox"  name="selectedpopcorn" value="Round10" onclick="calculateTotal()" />Popcorn bowl 2.5L -  (£9)</label><br/>
+                <label class='radiolabel'><input type="checkbox"  name="selectedpopcorn" value="Round12" onclick="calculateTotal()" />Popcorn bowl 3L- (£13)</label><br/>
+                <br/>
+                <label >Flavour</label>
+         
+                <select id="Flavour" name='Flavour' onchange="calculateTotal()">
+                <option value="None">Select Flavour</option>
+                <option value="Sweet">Sweet(£1)</option>
+                <option value="Salt">Salt(£1)</option>
+                <option value="Sticky Toffee">Sticky Toffee(£5)</option>
+                <option value="Sweet and Salty">Sweet and Salty(£2)</option>
+                <option value="Brown Butter-Lemon">Brown Butter-Lemon(£5)</option>
+                <option value="Salt and Vinegar">Salt and Vinegar(£4)</option>
+                <option value="Barbecue">Barbecue(£3)</option>
+                <option value="Peanut Butter">Peanut Butter(£8)</option>
+                <option value="Peanut Butter-Banana">Peanut Butter-Banana(£10)</option>
+                <option value="Tropical">Tropical(£7)</option>
+                <option value="Strawberry">Strawberry(£7)</option>
+                <option value="Cookies and Cream">Cookies and Cream(£12)</option>
+               </select>
+                <br/>
+                <p>
+                <label for='Devliver to your seat?' class="Devliver to your seat?">Devliver to your seat?(£6)</label>
+               <input type="checkbox" id="Devliver to your seat?" name='Devliver to your seat?' onclick="calculateTotal()" />
+               </p>
+               
+                <p>
+                <label class="inlinelabel" for='Drink'> Drink (£5)</label>
+                <input type="checkbox" id="Drink" name="Drink" onclick="calculateTotal()" />
+                <input type="text"  id="thedrink" name="thedrink" value="Enter Drink"  />
+                </p>
+                <div id="totalPrice"></div>
+              
+                </fieldset>
+            </div>
+            
+        	<div class="cont_details">
+            	<fieldset>
+                <legend>Contact Details</legend>
+                <label for='name'>Name</label>
+                <input type="text" id="name" name='name' />
+                <br/>
+                <label for='address'>Address</label>
+                <input type="text" id="address" name='address' />
+                <br/>
+                <label for='phonenumber'>Phone Number</label>
+                <input type="text"  id="phonenumber" name='phonenumber'/>
+                <br/>
+                </fieldset>
+            </div>
+            <input type='submit' id='submit' value='Submit' onclick="calculateTotal()" />
+        </div>  
+       </form>
+	</div><!--End of wrap-->
+    <script type="text/javascript">
+        var popcorn_prices = new Array();
+cake_prices["1.5L"]=4;
+cake_prices["2L"]=6;
+cake_prices["2.5L"]=9;
+cake_prices["3L"]=13;
+
+var flavour_prices = new Array();
+flavour_prices["None"]=0;
+flavour_prices["Sweet"]=1;
+flavour_prices["Salt"]=1;
+flavour_prices["Sticky Toffee"]=5;
+flavour_prices["Sweet and Salty"]=2;
+flavour_prices["Brown Butter-Banana"]=5;
+flavour_prices["Salt and Vinegar"]=4;
+flavour_prices["Barbecue"]=3;
+flavour_prices["Peanut Butter"]=8;
+flavour_prices["Peanut Butter-Banana"]=10;
+flavour_prices["Tropical"]=7;
+flavour_prices["Strawberry"]=7;
+flavour_prices["Strawberry"]=12;
+
+function getPopcornSizePrice() {
+    var popcornRadio = document.getElementsByName('selectedpopcorn');
+
+    for (i=0; i < popcornRadio.length; i++) {
+        if (popcornRadio[i].checked) {
+            user_input = popcornRadio[i].value;
+        }
+    }
+
+    return popcorn_prices[user_input];
+}
+
+function getFlavourPrice() {
+    var flavourSelect = document.getElementById('flavour');
+
+        return flavour_prices[flavourSelect.value];
+}
+
+function getDevliverPrice() {
+    var cakeDevliver = document.getElementById('includeDevliver');
+
+    if(Devliver.checked) {
+        return(6);
+    } else {
+        return(0);
+    }
+}
+function getDrinkPrice() {
+    var popcornDrink = document.getElementById('thedrink');
+
+    if(popcornDrink.checked) {
+        return(5);
+    } else {
+        return(0);
+    }
+}
+
+function calculateTotal() {
+    var total = getpopcornSizePrice() + getFlavourPrice() + getDevliverPrice() + getDrinkPrice();
+    var totalEl = document.getElementById('totalPrice');
+
+    document.getElementById('totalPrice').innerHTML = "Your Total is: £" + total;
+    totalEl.style.display = 'block';
+    function showTotal() {
+    var totalEl = document.getElementById('totalPrice');
+    totalEl.style.display = 'none';
+}
+</script>
+<div class= "box-6">
+<img src="images/popcorn.jpg">
+      <br>
+      <div class="link2">
+        <ul>
+   <a href="index.html">Home Page</a>
+   <br>
+   <br>
+   <br>
+   <a href="bookings.html">Book Your Tickeks</a>
+   </ul>
+</div>
+</body>
+</html>
